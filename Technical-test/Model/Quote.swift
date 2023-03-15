@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quote {
+struct Quote: Decodable {
     var symbol:String?
     var name:String?
     var currency:String?
