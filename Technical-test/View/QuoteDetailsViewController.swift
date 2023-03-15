@@ -9,7 +9,15 @@ import UIKit
 
 class QuoteDetailsViewController: UIViewController {
     
+    var addFavoriteQuote: ((Quote?, Bool?) -> Void)?
+    
     private var quote:Quote? = nil
+    private var isFavorite: Bool? {
+        didSet {
+            addFavoriteQuote?(quote, isFavorite)
+            updateView()
+        }
+    }
     
     let symbolLabel = UILabel()
     let nameLabel = UILabel()
@@ -18,12 +26,10 @@ class QuoteDetailsViewController: UIViewController {
     let readableLastChangePercentLabel = UILabel()
     let favoriteButton = UIButton()
     
-    
-    
-    
-    init(quote:Quote) {
+    init(quote:Quote, isFavorite: Bool) {
         super.init(nibName: nil, bundle: nil)
         self.quote = quote
+        self.isFavorite = isFavorite
     }
     
     required init?(coder: NSCoder) {
@@ -41,7 +47,7 @@ class QuoteDetailsViewController: UIViewController {
         lastLabel.text = quote?.last
         currencyLabel.text = quote?.currency
         readableLastChangePercentLabel.text = quote?.readableLastChangePercent
-        
+        updateView()
     }
     
     func addSubviews() {
@@ -121,14 +127,22 @@ class QuoteDetailsViewController: UIViewController {
                         
             favoriteButton.topAnchor.constraint(equalTo: readableLastChangePercentLabel.bottomAnchor, constant: 30),
             favoriteButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            favoriteButton.widthAnchor.constraint(equalToConstant: 150),
+            favoriteButton.widthAnchor.constraint(equalToConstant: 200),
             favoriteButton.heightAnchor.constraint(equalToConstant: 44),
             
         ])
     }
     
+    private func updateView() {
+        if isFavorite ?? false {
+            favoriteButton.setTitle("Remove from favorites", for: .normal)
+        } else {
+            favoriteButton.setTitle("Add to favorites", for: .normal)
+        }
+    }
+    
     
     @objc func didPressFavoriteButton(_ sender:UIButton!) {
-        // TODO
+        isFavorite = !(isFavorite ?? true)
     }
 }

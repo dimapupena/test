@@ -15,6 +15,7 @@
 		1AA3C8B6263AB26C0041430A /* QuoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C8B5263AB26C0041430A /* QuoteDetailsViewController.swift */; };
 		1AA3C8BA263AB2980041430A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA3C8B9263AB2980041430A /* Quote.swift */; };
 		1AC78CBF263C6686004D4F8F /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC78CBE263C6686004D4F8F /* Market.swift */; };
+		66BCD3A529C1D13400B4318A /* QuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BCD3A429C1D13400B4318A /* QuotesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1AA3C8B5263AB26C0041430A /* QuoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailsViewController.swift; sourceTree = "<group>"; };
 		1AA3C8B9263AB2980041430A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		1AC78CBE263C6686004D4F8F /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		66BCD3A429C1D13400B4318A /* QuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				1AA3C89A263AA2030041430A /* QuotesListViewController.swift */,
+				66BCD3A429C1D13400B4318A /* QuotesTableViewCell.swift */,
 				1AA3C8B5263AB26C0041430A /* QuoteDetailsViewController.swift */,
 			);
 			path = View;
@@ -170,6 +173,7 @@
 				1AA3C89B263AA2030041430A /* QuotesListViewController.swift in Sources */,
 				1AA3C8B2263AA8360041430A /* DataManager.swift in Sources */,
 				1AA3C8BA263AB2980041430A /* Quote.swift in Sources */,
+				66BCD3A529C1D13400B4318A /* QuotesTableViewCell.swift in Sources */,
 				1AA3C897263AA2030041430A /* AppDelegate.swift in Sources */,
 				1AC78CBF263C6686004D4F8F /* Market.swift in Sources */,
 			);
